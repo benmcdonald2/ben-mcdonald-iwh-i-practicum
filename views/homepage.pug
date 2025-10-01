@@ -1,0 +1,25 @@
+
+doctype html
+html
+  head
+    title Shipping Orders
+  body
+    h1 Shipping Orders
+    a(href='/update-cobj') Add to this table
+    if records.length
+      table(border='1')
+        thead
+          tr
+            th Shipping Name
+            th Shipping ID
+            th Shipping Band
+            th Shipping Location
+        tbody
+          each record in records
+            tr
+              td= record.properties.shipping_name
+              td= record.properties.shipping_id
+              td= record.properties.shipping_band
+              td= record.properties.shipping_location
+    else
+      p No shipping orders found.

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+    form(action="/update-cobj" method="POST")
+      div
+        label(for="shipping_name") Shipping Name:
+        input(type="text" name="shipping_name" id="shipping_name" required)
+      div
+        label(for="shipping_id") Shipping ID:
+        input(type="text" name="shipping_id" id="shipping_id")
+      div
+        label(for="shipping_band") Shipping Band:
+        input(type="text" name="shipping_band" id="shipping_band")
+      div
+        label(for="shipping_location") Shipping Location:
+        input(type="text" name="shipping_location" id="shipping_location")
+      div
+        button(type="submit") Add Shipping Order
+    br
+    a(href='/') Back to Homepage
+  
